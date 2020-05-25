@@ -1,0 +1,44 @@
+section {
+  width: 114rem;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+
+  .portrait {
+    width: 7.5rem;
+    height: 7.5rem;
+    
+    padding: 0;
+    margin-top: 7.5rem;
+    margin-right: 7.5rem;
+    justify-content: space-around;
+  
+    &:nth-child(1) {
+      margin-left: 7.5rem;
+    }
+    &:nth-child(8) {
+      margin-left: 7.5rem;
+    }
+    &:nth-child(15) {
+      margin-left: 7.5rem;
+    }
+    &:nth-child(22) {
+      margin-left: 7.5rem;
+    }
+    &:nth-child(29) {
+      margin-left: 7.5rem;
+    }
+    
+    .torch {
+      width: 7.5rem;
+      height: 7.5rem;
+      background-clip: border-box;
+      border: 0.5rem solid rgb(72,72,72);
+    }
+  }
+}
+
+
+
