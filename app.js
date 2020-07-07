@@ -7,6 +7,7 @@ let arrEvent;
 let eventBack;
 let newStr;
 
+
 const portraitArr = ["Abomination.png", "Antiquarian.png", "Arbalest.png", "Bounty_hunter.png", "Crusader.png",
                      "Flagellant.png", "Grave_robber.png", "Hellion.png", "Highwayman.png", "Hound_master.png",
                      "Jester.png", "Leper.png", "Man-at-arms.png", "Musketeer.png", "Occultist.png", "Plague_doctor.png",
@@ -63,18 +64,18 @@ for ( let element of elementsArr) {
     let attrIsSet = event.target.hasAttribute("style");
     
     if (!attrIsSet) {
-      event.target.pointerEvent = "none";
+      let parentDiv = event.target.parentElement.parentElement;
+      let divChild = parentDiv.firstChild;
+      let firstChildOfDivSrc = divChild.firstChild.src;
       event.target.parentElement.style.transformStyle = "preserve-3d";
       event.target.parentElement.parentElement.style.transform = "rotateY(180deg)"
       event.target.parentElement.parentElement.style.transition = "all 2s";
       imgBack.style.transform = "rotateY(0)";
       event.target.parentElement.style.backfaceVisibility = "hidden";
-      newStr = event.target.src.split("/").pop().split(".")[0]
-      console.log(newStr); // Tu sprawdzam ktory element sie pobral po kliknieciu
-
-     event.stopPropagation();
+      firstChildOfDivSrc.split("/").pop().split(".")[0];
+      console.log(firstChildOfDivSrc.split("/").pop().split(".")[0]);
     }
-  }, true)
+  })
 }
 
 
