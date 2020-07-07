@@ -4,6 +4,8 @@ let card__container;
 let imgBack;
 let imgFront;
 let arrEvent;
+let eventBack;
+let newStr;
 
 const portraitArr = ["Abomination.png", "Antiquarian.png", "Arbalest.png", "Bounty_hunter.png", "Crusader.png",
                      "Flagellant.png", "Grave_robber.png", "Hellion.png", "Highwayman.png", "Hound_master.png",
@@ -45,9 +47,15 @@ const createPortrait = () => {
     });
 }
 
+const reversePortrait = () => {
+
+}
+
+const checkPortraitEquality = () => {
+  let firstPortraitRevield = event.target.src;
+}
 
 createPortrait();
-
 
 let elementsArr = document.getElementsByClassName("container__card");
 for ( let element of elementsArr) {
@@ -55,17 +63,19 @@ for ( let element of elementsArr) {
     let attrIsSet = event.target.hasAttribute("style");
     
     if (!attrIsSet) {
+      event.target.pointerEvent = "none";
       event.target.parentElement.style.transformStyle = "preserve-3d";
       event.target.parentElement.parentElement.style.transform = "rotateY(180deg)"
       event.target.parentElement.parentElement.style.transition = "all 2s";
       imgBack.style.transform = "rotateY(0)";
       event.target.parentElement.style.backfaceVisibility = "hidden";
-      console.log(event.target)  
-    }
+      newStr = event.target.src.split("/").pop().split(".")[0]
+      console.log(newStr); // Tu sprawdzam ktory element sie pobral po kliknieciu
 
-    event.stopPropagation();
-  }, false)
+     event.stopPropagation();
+    }
+  }, true)
 }
 
-console.log(portraitArr);
+
 

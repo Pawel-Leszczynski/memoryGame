@@ -5,6 +5,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-shrink: 0;
+  perspective: 150rem;
   
 
 
@@ -49,6 +50,7 @@
         position: absolute;
         top: 0;
         left: 0;
+        z-index: 1000; 
       }
 
       &--back {
@@ -56,82 +58,9 @@
         top: 0;
         left: 0;
         transform: rotateY(180deg);
+        z-index: -9999;
+        pointer-events: none;
       }
     }
   }
-
-
-
-
-
-  // &__portrait {
-  //   width: 7.5rem;
-  //   height: 7.5rem;
-  //   padding: 0;
-  //   margin-top: 7.5rem;
-  //   margin-right: 7.5rem;
-  //   justify-content: space-around;
-  //   perspective: 300rem;
-  //   position: relative;
-  //   transform-style: preserve-3d;
-    
-  
-  //   &:nth-child(1) {
-  //     margin-left: 7.5rem;
-  //   }
-  //   &:nth-child(7) {
-  //     margin-left: 7.5rem;
-  //   }
-  //   &:nth-child(13) {
-  //     margin-left: 7.5rem;
-  //   }
-  //   &:nth-child(19) {
-  //     margin-left: 7.5rem;
-  //   }
-  //   &:nth-child(25) {
-  //     margin-left: 7.5rem;
-  //   }
-
-  //   &:nth-child(31) {
-  //     margin-left: 7.5rem;
-  //   }  
-
-  //   // // &:active > &--torch--front {
-  //   // //   transform: rotateY(180deg);
-  //   // // }
-  //   // // &:active > &--torch--back {
-  //   // //   transform: rotateY(0);
-  //   // // }
-
-  //   // &:hover > &--torch--front {
-  //   //   transform: rotateY(180deg);
-  //   // }
-  //   // &:hover > &--torch--back {
-  //   //   transform: rotateY(0);
-  //   // }
-
-  //   &--torch {
-  //     width: 7.5rem;
-  //     height: 7.5rem;
-  //     border: 0.5rem solid rgb(72,72,72);
-  //     transition: 1s;
-      
-
-  //     &--front {
-  //       height: 7.5rem;
-  //       position: absolute;
-  //       backface-visibility: hidden;
-  //     }
-  
-  //     &--back {
-  //       height: 7.5rem;
-  //       position: absolute;
-  //       transform: rotateY(180deg);
-  //       backface-visibility: hidden; 
-  //     }
-  //   }
-  // }
 }
-
-
-
